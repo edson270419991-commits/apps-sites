@@ -27,7 +27,7 @@ footer{color:var(--mut);font:.85rem system-ui,sans-serif;border-top:1px solid va
 <header><nav><a href="index.html">Início</a><a href="privacidade.html">Política de Privacidade</a><a href="termos.html">Termos de Serviço</a></nav></header>
 <main>
 <h1>Política de Privacidade</h1>
-<p class="mut">Última atualização: 19/10/2026</p>
+<p class="mut">Última atualização: 21/10/2026</p>
 
 <p>Esta política explica quais informações o aplicativo <strong>Meu Negócio</strong> (pacote <code>com.meunegocio.app</code>) usa, para quê, e como você controla seus dados.</p>
 
@@ -43,7 +43,7 @@ footer{color:var(--mut);font:.85rem system-ui,sans-serif;border-top:1px solid va
 <h2>2. Quais informações o aplicativo guarda</h2>
 <p>Somente o que você mesmo digita no aplicativo:</p>
 <ul>
-<li>Produtos: código, nome, quantidade, custo, preço, detalhes e histórico de reposição.</li>
+<li>Produtos: código, nome, quantidade, custo, preço, detalhes, histórico de reposição e fotos (opcionais).</li>
 <li>Clientes: nome e telefone.</li>
 <li>Vendas, parcelas, pagamentos (valor, data e forma de pagamento) e descontos.</li>
 <li>Dados da loja para o comprovante: nome, telefone e mensagem final.</li>
@@ -57,13 +57,14 @@ footer{color:var(--mut);font:.85rem system-ui,sans-serif;border-top:1px solid va
 <li><strong>drive.file</strong>: permite ao aplicativo criar e ler <em>apenas o arquivo que ele mesmo criou</em> (<code>meunegocio-backup.json</code>) no seu Drive. O aplicativo não consegue ver nem abrir nenhum outro arquivo seu.</li>
 <li><strong>userinfo.email</strong>: usado apenas para mostrar, na tela, qual conta está conectada.</li>
 </ul>
-<p>O arquivo de backup contém os dados descritos na seção 2 e fica somente na sua conta Google. O envio vai direto do seu aparelho para o Google; o desenvolvedor não tem acesso a ele.</p>
+<p>O arquivo de backup contém os dados descritos na seção 2, <strong>exceto as imagens das fotos dos produtos</strong>, que ficam apenas no aparelho, e fica somente na sua conta Google. O envio vai direto do seu aparelho para o Google; o desenvolvedor não tem acesso a ele.</p>
 <p>O uso e a transferência de informações recebidas das APIs do Google pelo Meu Negócio seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado. As informações obtidas do Google são usadas apenas para fazer e restaurar o seu backup e para exibir a conta conectada.</p>
 
 <h2>4. Permissões do aplicativo</h2>
 <ul>
 <li><strong>Internet</strong>: somente para o backup no Google Drive.</li>
 <li><strong>Notificações</strong>: para o aviso diário de vencimentos, atrasos, parcelas que vencem nos próximos dias (prazo configurável nas configurações) e estoque baixo. As notificações são geradas no próprio aparelho. Você pode desligá-las no aplicativo ou nas configurações do Android.</li>
+<li><strong>Fotos dos produtos</strong> (opcional): ao adicionar uma foto, você tira com a câmera do aparelho ou escolhe uma imagem da galeria pelo seletor do Android. O aplicativo recebe somente a imagem que você escolheu, não tem acesso às demais fotos do aparelho, e guarda uma cópia reduzida no armazenamento privado dele. Por isso não pede permissão de câmera nem de galeria.</li>
 <li><strong>Bloqueio do aplicativo</strong> (opcional): usa a verificação de identidade do Android (biometria ou tela de bloqueio). O aplicativo não recebe nem guarda sua digital, seu rosto ou sua senha; o sistema apenas informa se a verificação deu certo.</li>
 </ul>
 
@@ -75,7 +76,7 @@ footer{color:var(--mut);font:.85rem system-ui,sans-serif;border-top:1px solid va
 
 <h2>7. Por quanto tempo os dados ficam guardados e como apagá-los</h2>
 <ul>
-<li><strong>No aparelho</strong>: até você apagar os registros ou desinstalar o aplicativo (a desinstalação remove o banco de dados local).</li>
+<li><strong>No aparelho</strong>: até você apagar os registros ou desinstalar o aplicativo (a desinstalação remove o banco de dados local e as fotos). Você também pode remover uma foto a qualquer momento editando o produto.</li>
 <li><strong>No Google Drive</strong>: até você excluir o arquivo <code>meunegocio-backup.json</code> do seu Drive.</li>
 <li><strong>Acesso do aplicativo à sua conta Google</strong>: pode ser revogado a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, ou tocando em <em>Sair da conta</em> no aplicativo.</li>
 </ul>
