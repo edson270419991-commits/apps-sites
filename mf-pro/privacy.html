@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Política de Privacidade - MF Pro</h1>
-<p><strong>Última atualização:</strong> 3 de novembro de 2026</p>
+<p><strong>Última atualização:</strong> 4 de novembro de 2026</p>
 
 <p>O MF Pro ("o aplicativo", "nós") é um aplicativo de gestão financeira pessoal para Android. Esta Política de Privacidade explica quais dados o aplicativo acessa, como são usados e como são protegidos.</p>
 
@@ -36,7 +36,7 @@
 <p>O aplicativo pode solicitar as seguintes permissões do Android:</p>
 <ul>
   <li><strong>Câmera:</strong> usada apenas quando você opta por escanear documentos, ler QR codes ou tirar uma foto/comprovante dentro do app. As imagens e leituras ficam salvas somente no seu aparelho.</li>
-  <li><strong>Notificações:</strong> usada para lembretes de contas, vencimentos e backups configurados por você.</li>
+  <li><strong>Notificações:</strong> usada para lembretes de contas, vencimentos e para avisar quando um backup automático configurado por você falha ou precisa da sua atenção (por exemplo, pasta indisponível ou autorização do Google expirada).</li>
   <li><strong>Internet e estado da rede:</strong> usadas para o recurso opcional de backup no Google Drive e para o servidor de compartilhamento pela rede local (seção 5), que só funciona quando você o liga.</li>
   <li><strong>Serviço em primeiro plano (sincronização de dados):</strong> usado apenas para manter o servidor de compartilhamento ligado, com uma notificação fixa visível, enquanto você o estiver usando.</li>
   <li><strong>Contas do dispositivo:</strong> usada para permitir que você selecione a conta Google ao conectar o backup.</li>
@@ -45,7 +45,9 @@
 
 <h2>4. Armazenamento e segurança</h2>
 <p>Seus dados financeiros permanecem armazenados localmente no seu dispositivo, a menos que você ative manualmente o backup no Google Drive. Os backups na nuvem ficam na sua própria conta do Google, sob seu controle total — você pode excluí-los a qualquer momento pelo Google Drive ou desconectando o recurso dentro do app.</p>
-<p>Ao conectar sua conta Google pela primeira vez, o aplicativo pode verificar automaticamente se já existe um backup salvo na pasta "MF Pro Backups" e, caso exista, restaurá-lo automaticamente no dispositivo, usando a senha de backup que você já cadastrou no app. Essa restauração automática pode ser desativada a qualquer momento nas opções de backup dentro do aplicativo.</p>
+<p>Ao conectar sua conta Google, o aplicativo verifica se já existe um backup salvo na pasta "MF Pro Backups". Se existir e o aparelho ainda não tiver nenhum dado seu, o backup é restaurado automaticamente, usando a senha de backup que você já cadastrou no app. Se o aparelho já tiver dados, nada é substituído sem a sua ação: o aplicativo apenas avisa que há um backup disponível e você decide se quer restaurá-lo. Essa restauração automática pode ser desativada a qualquer momento nas opções de backup dentro do aplicativo.</p>
+<p>Antes de restaurar qualquer backup, o aplicativo confere se o arquivo é válido e se a senha está correta, para não apagar seus dados locais por causa de um arquivo incompleto ou de uma senha errada.</p>
+<p>No backup automático diário em pasta do aparelho, o aplicativo mantém apenas os 7 arquivos mais recentes criados por ele e apaga os mais antigos dessa mesma pasta. Na nuvem, se um novo backup for muito menor que o anterior, o aplicativo guarda uma cópia do anterior na mesma pasta "MF Pro Backups" (arquivo "mfpro-previous.mfcbackup") antes de substituí-lo. Você pode apagar esses arquivos a qualquer momento.</p>
 
 <h2>5. Servidor de compartilhamento pela rede local</h2>
 <p>Ao compartilhar arquivos, você pode escolher a opção "Servidor na rede". Nesse caso, o aplicativo liga temporariamente um pequeno servidor no seu próprio celular e mostra um QR code com um link. Quem estiver conectado à mesma rede Wi-Fi (ou ao seu ponto de acesso) e tiver esse link ou QR code consegue baixar os arquivos escolhidos por você pelo navegador e, no caso de PDF e imagens, também abri-los e imprimi-los pelo próprio navegador. Importante:</p>
