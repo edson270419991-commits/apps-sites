@@ -26,13 +26,13 @@ footer{text-align:center;color:var(--dim);font-size:13px;padding:0 20px 40px}
 <header>
 <svg width="84" height="84" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Launch"><rect width="108" height="108" rx="24" fill="#1B1F3B"/><rect x="25" y="25" width="26" height="26" rx="7" fill="#FF5252"/><rect x="57" y="25" width="26" height="26" rx="7" fill="#FFD740"/><rect x="25" y="57" width="26" height="26" rx="7" fill="#69F0AE"/><rect x="57" y="57" width="26" height="26" rx="7" fill="#40C4FF"/></svg>
 <h1>Política de privacidade</h1>
-<p>Última atualização: 11 de novembro de 2026</p>
+<p>Última atualização: 12 de novembro de 2026</p>
 <nav><a href="index.html">Início</a><a href="privacidade.html">Política de privacidade</a><a href="termos.html">Termos de serviço</a></nav>
 </header>
 <main>
 
 <section><h2>Resumo</h2>
-<p>O Launch não tem servidor próprio e não envia seus dados para terceiros. Suas configurações ficam no seu aparelho. O único envio de dados acontece se você escolher usar o backup no Google Drive, e vai direto do seu aparelho para o seu próprio Drive.</p></section>
+<p>O Launch não tem servidor próprio e não envia seus dados para terceiros. Suas configurações ficam no seu aparelho. Há apenas dois envios de dados, ambos opcionais: o backup no Google Drive, que vai direto do seu aparelho para o seu próprio Drive, e a consulta de previsão do tempo, feita à API Open-Meteo quando o card de Clima está ligado.</p></section>
 <section><h2>Dados usados no aparelho</h2>
 <ul>
 <li><strong>Lista de apps instalados:</strong> usada só para montar a tela inicial. Não sai do aparelho.</li>
@@ -40,13 +40,16 @@ footer{text-align:center;color:var(--dim);font-size:13px;padding:0 20px 40px}
 <li><strong>Acesso ao uso de apps (opcional):</strong> se você liberar essa permissão do Android, o Launch lê o tempo de uso dos apps apenas para ordenar por "Mais usados" ou "Usados recentemente". Os dados são processados no aparelho e não são enviados a ninguém.</li>
 <li><strong>Senha do celular (opcional):</strong> se você ligar "Exigir senha do celular", a confirmação é feita pela tela do próprio Android. O Launch não lê, não guarda e não envia a sua senha, PIN ou padrão; só recebe a resposta "confirmado" ou "não confirmado".</li>
 <li><strong>Bateria, temperatura, memória, armazenamento, velocidade da rede e processador:</strong> lidos localmente para mostrar nos cards. A velocidade da rede é só o volume de dados que passa pelo aparelho, medido por ele mesmo; o Launch não vê nem registra o conteúdo do tráfego. Nada é enviado.</li>
+<li><strong>Localização aproximada (opcional):</strong> se você permitir, o card de Clima usa a localização aproximada do celular só para descobrir a sua cidade e buscar a previsão. A localização não é guardada em nenhum servidor nosso, não é compartilhada e não é enviada a ninguém além da API de clima, que recebe apenas as coordenadas aproximadas da cidade para devolver a previsão. Você pode negar a permissão e escolher a cidade na mão, ou desligar o card.</li>
+<li><strong>Previsão do tempo:</strong> o card de Clima consulta a Open-Meteo (open-meteo.com), uma API gratuita e sem chave. Ela recebe as coordenadas da cidade (as da localização aproximada ou as da cidade que você escolheu) e, na busca de cidade, o nome digitado. O Launch não envia nenhum outro dado, como lista de apps, identificador do aparelho ou dados pessoais. O último resultado fica guardado no aparelho para funcionar sem internet.</li>
+<li><strong>Música em reprodução (opcional):</strong> para o card de Player de música, o Android pede que você libere o <em>acesso às notificações</em> para o Launch. Esse acesso é usado apenas para ler, pelas sessões de mídia do Android, o título, o artista, a capa e o estado (tocando ou pausado) da faixa que está tocando em qualquer app, e para enviar os comandos de tocar, pausar, anterior e próxima. O Launch não lê o conteúdo das suas notificações, não grava o que você ouve, não captura o áudio nem usa o microfone, e nada disso sai do aparelho. A animação do equalizador acompanha apenas o estado de reprodução. Você pode revogar o acesso a qualquer momento nas configurações do Android.</li>
 <li><strong>Apps faltando (Play Store):</strong> ao tocar em <em>Instalar</em>, o Launch apenas abre a página do app na Play Store do seu aparelho. A partir daí valem as regras da Google Play. O Launch não instala nada sozinho.</li>
 </ul></section>
 <section><h2>Backup no Google Drive (opcional)</h2>
 <ul>
 <li><strong>Conta Google:</strong> usamos o e-mail e o perfil básico apenas para mostrar, dentro do app, qual conta está conectada.</li>
 <li><strong>Drive:</strong> o app usa o escopo <em>drive.file</em>, que permite acessar somente os arquivos criados pelo próprio Launch. Ele cria a pasta "Launch Backup" e o arquivo de backup dentro dela.</li>
-<li><strong>Conteúdo do backup:</strong> configurações (incluindo o tamanho e o estilo de cada card e o tamanho dos ícones), regras de pastas automáticas, apps escondidos, a organização da tela inicial (pastas, ordem e nomes de pacote dos apps) e a lista de apps que ficaram faltando, com os nomes deles. Não inclui mensagens, fotos, contatos, dados de dentro de outros apps nem o histórico de uso.</li>
+<li><strong>Conteúdo do backup:</strong> configurações (incluindo o tamanho e o estilo de cada card, a cidade escolhida para o clima e o tamanho dos ícones), regras de pastas automáticas, apps escondidos, a organização da tela inicial (pastas, ordem e nomes de pacote dos apps) e a lista de apps que ficaram faltando, com os nomes deles. Não inclui mensagens, fotos, contatos, dados de dentro de outros apps nem o histórico de uso.</li>
 <li>O Launch não lê sua caixa de entrada nem outros arquivos do seu Drive.</li>
 </ul></section>
 <section><h2>Compartilhamento</h2>
@@ -55,7 +58,8 @@ footer{text-align:center;color:var(--dim);font-size:13px;padding:0 20px 40px}
 <ul>
 <li><strong>Backup:</strong> apague a pasta "Launch Backup" no seu Google Drive.</li>
 <li><strong>Acesso do app à sua conta:</strong> remova o Launch em myaccount.google.com/permissions.</li>
-<li><strong>Dados no aparelho:</strong> limpe os dados do app nas configurações do Android ou desinstale o Launch.</li>
+<li><strong>Dados no aparelho:</strong> limpe os dados do app nas configurações do Android ou desinstale o Launch. Isso apaga também o último clima salvo.</li>
+<li><strong>Localização e acesso às notificações:</strong> revogue as duas permissões nas configurações do Android, em Apps e depois Launch, e em Acesso às notificações.</li>
 <li>No app, "Sair" desconecta a conta Google do Launch.</li>
 </ul></section>
 <section><h2>Contato</h2>
