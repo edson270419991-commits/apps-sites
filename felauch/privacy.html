@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade - MF Pro</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; margin-top: 1.8em; color: #1a4d8f; }
+  footer { margin-top: 3em; font-size: 0.85em; color: #666; }
+  a { color: #1a4d8f; }
+</style>
+</head>
+<body>
+<h1>Política de Privacidade - MF Pro</h1>
+<p><strong>Última atualização:</strong> 20 de novembro de 2026</p>
+
+<p>O MF Pro ("o aplicativo", "nós") é um aplicativo de gestão financeira pessoal para Android. Esta Política de Privacidade explica quais dados o aplicativo acessa, como são usados e como são protegidos.</p>
+
+<h2>1. Dados que coletamos</h2>
+<p>O MF Pro foi criado para funcionar, por padrão, de forma totalmente local no seu dispositivo, sem nenhum servidor nosso. As informações financeiras, notas, arquivos e demais dados que você cadastra são armazenados localmente no seu aparelho, dentro do banco de dados do próprio aplicativo.</p>
+<p>Não coletamos, vendemos ou compartilhamos seus dados pessoais ou financeiros com terceiros. Não utilizamos bibliotecas de publicidade ou de rastreamento de terceiros.</p>
+
+<h2>2. Integração com o Google Drive</h2>
+<p>O MF Pro oferece, de forma opcional, um recurso de backup na nuvem usando sua própria conta do Google Drive. Ao ativar esse recurso, você autoriza o aplicativo a usar o escopo <code>drive.file</code> do Google, que permite ao MF Pro:</p>
+<ul>
+  <li>Criar uma pasta chamada "MF Pro Backups" na sua conta do Google Drive, com as subpastas "Modulos", "Arquivos" e "Chaves";</li>
+  <li>Criar, atualizar, ler e apagar apenas os arquivos de backup que o próprio aplicativo cria nessas pastas.</li>
+</ul>
+<p>O backup é modular: finanças, senhas, notas, grupos e configurações ficam em arquivos separados na subpasta "Modulos", e todos os arquivos da aba Arquivos ficam juntos em um único arquivo compactado (zip) na subpasta "Arquivos", que na restauração recoloca todos os documentos de uma vez. A cada envio, o aplicativo reenvia somente as partes que mudaram (o zip dos arquivos só sobe de novo quando algum arquivo muda). Quando você apaga um arquivo no aplicativo, a cópia correspondente também é apagada do seu Google Drive no envio seguinte. A restauração é sempre completa: o aplicativo baixa todas as partes e restaura tudo de uma vez.</p>
+<p>Se você configurou chaves de API do recurso de inteligência artificial (seção 6), todos os perfis de chave cadastrados também são enviados ao backup, na subpasta "Chaves", <strong>em texto limpo, sem criptografia</strong>, mesmo que o restante do backup tenha senha. Quem tiver acesso à sua conta do Google poderá ver essas chaves. Se preferir, não configure a IA, ou apague as chaves nas opções do aplicativo e o arquivo da subpasta "Chaves" no Google Drive.</p>
+<p>Esse escopo <strong>não dá ao MF Pro acesso</strong> a nenhum outro arquivo, pasta ou conteúdo já existente na sua conta do Google Drive. O aplicativo não consegue visualizar, listar ou modificar arquivos que você ou outros aplicativos tenham criado fora dessa pasta de backup.</p>
+<p>Os arquivos de backup contêm os dados financeiros, senhas do cofre, notas e arquivos que você cadastrou no aplicativo, podendo ser opcionalmente protegidos por senha definida por você antes do envio (as chaves de API da IA, descritas acima, são a exceção). Essa senha não é enviada, armazenada ou conhecida por nós — apenas você tem acesso a ela.</p>
+<p>Também podemos solicitar seu endereço de e-mail (escopo <code>userinfo.email</code>) apenas para identificar qual conta Google está conectada ao recurso de backup, exibido dentro do próprio app.</p>
+
+<h2>3. Permissões do dispositivo</h2>
+<p>O aplicativo pode solicitar as seguintes permissões do Android:</p>
+<ul>
+  <li><strong>Câmera:</strong> usada apenas quando você opta por escanear documentos, ler QR codes ou tirar uma foto/comprovante dentro do app. As imagens e leituras ficam salvas somente no seu aparelho.</li>
+  <li><strong>Notificações:</strong> usada para lembretes de contas, vencimentos e para avisar quando um backup automático configurado por você falha ou precisa da sua atenção (por exemplo, pasta indisponível ou autorização do Google expirada).</li>
+  <li><strong>Internet e estado da rede:</strong> usadas para o recurso opcional de backup no Google Drive, para o recurso opcional de inteligência artificial (seção 6), para abrir esta política e os termos a partir do aplicativo e para o servidor de compartilhamento pela rede local (seção 5), que só funciona quando você o liga.</li>
+  <li><strong>Serviço em primeiro plano (sincronização de dados):</strong> usado apenas para manter o servidor de compartilhamento ligado, com uma notificação fixa visível, enquanto você o estiver usando.</li>
+  <li><strong>Contas do dispositivo:</strong> usada para permitir que você selecione a conta Google ao conectar o backup.</li>
+</ul>
+<p>Nenhuma dessas permissões é usada para rastreamento, publicidade ou coleta de dados para fins alheios ao funcionamento do app.</p>
+
+<h2>4. Armazenamento e segurança</h2>
+<p>Seus dados financeiros permanecem armazenados localmente no seu dispositivo, a menos que você ative manualmente o backup no Google Drive. Os backups na nuvem ficam na sua própria conta do Google, sob seu controle total — você pode excluí-los a qualquer momento pelo Google Drive ou desconectando o recurso dentro do app.</p>
+<p>Ao conectar sua conta Google, o aplicativo verifica se já existe um backup salvo na pasta "MF Pro Backups". Se existir e o aparelho ainda não tiver nenhum dado seu, o backup é restaurado automaticamente, usando a senha de backup que você já cadastrou no app. Se o aparelho já tiver dados, nada é substituído sem a sua ação: o aplicativo apenas avisa que há um backup disponível e você decide se quer restaurá-lo. Essa restauração automática pode ser desativada a qualquer momento nas opções de backup dentro do aplicativo.</p>
+<p>Antes de restaurar qualquer backup, o aplicativo confere se o arquivo é válido e se a senha está correta, para não apagar seus dados locais por causa de um arquivo incompleto ou de uma senha errada.</p>
+<p>No backup automático diário em pasta do aparelho, o aplicativo mantém apenas os 7 arquivos mais recentes criados por ele e apaga os mais antigos dessa mesma pasta. Na nuvem, se uma parte nova do backup for muito menor que a anterior, o aplicativo guarda uma cópia da anterior na mesma subpasta (arquivo com final ".previous") antes de substituí-la. Backups antigos de arquivo único ("mfpro-latest.mfcbackup" e "mfpro-previous.mfcbackup") continuam podendo ser restaurados e não são apagados automaticamente. Você pode apagar esses arquivos a qualquer momento.</p>
+
+<h2>5. Servidor de compartilhamento pela rede local</h2>
+<p>Ao compartilhar arquivos, você pode escolher a opção "Servidor na rede". Nesse caso, o aplicativo liga temporariamente um pequeno servidor no seu próprio celular e mostra um QR code com um link. Quem estiver conectado à mesma rede Wi-Fi (ou ao seu ponto de acesso) e tiver esse link ou QR code consegue baixar os arquivos escolhidos por você pelo navegador e, no caso de PDF e imagens, também abri-los e imprimi-los pelo próprio navegador. Importante:</p>
+<ul>
+  <li>O servidor só liga quando você pede e depois de um aviso (que pode ser desativado nas Opções). Ele desliga sozinho após o tempo escolhido (padrão: 15 minutos). Se você escolher a opção "Sem limite de tempo", ele permanece ligado até você encerrá-lo. Em qualquer caso, ele pode ser encerrado a qualquer momento pelo botão "Encerrar" da notificação fixa ou dentro do app.</li>
+  <li>Os arquivos vão direto do seu celular para o aparelho de quem baixa, pela rede local. Eles não passam por servidores nossos nem pela internet, e não guardamos registro de acessos.</li>
+  <li>O acesso é protegido apenas por um código aleatório de 16 caracteres no link, que muda a cada vez que o servidor é ligado. A conexão não é criptografada (HTTP). Use apenas em redes de confiança.</li>
+  <li>Para cards do Cofre, o aplicativo pede biometria ou a senha do aparelho antes de colocá-los no ar (configuração ativada por padrão).</li>
+  <li>Apenas os arquivos que você escolheu naquele compartilhamento ficam disponíveis; o restante dos seus dados não é acessível.</li>
+  <li>O servidor é somente leitura: ele apenas entrega os arquivos e não recebe nem grava nada vindo de outros aparelhos. Ele escuta apenas na rede Wi-Fi ou no ponto de acesso do aparelho, e não pelos dados móveis.</li>
+  <li>Em navegadores sem visualizador de PDF (como a maioria dos de celular), PDFs só podem ser baixados; abrir e imprimir pela página fica disponível para imagens e, onde houver visualizador, para PDF.</li>
+  <li>Ao abrir ou imprimir um arquivo, o outro aparelho recebe uma cópia dele no navegador, como no download. O que a pessoa faz com essa cópia (imprimir, salvar, repassar) foge do controle do aplicativo.</li>
+</ul>
+
+<h2>6. Inteligência artificial (opcional)</h2>
+<p>O botão "IA" do painel é opcional e só funciona se você cadastrar, nas opções do aplicativo, o provedor (GPT/OpenAI, Claude/Anthropic, Gemini/Google, OpenRouter ou OpenCode Zen), o modelo e a sua própria chave de API. Ao tocar em "Interpretar", o aplicativo envia ao provedor escolhido somente a frase que você escreveu ou falou, a data de hoje e a lista de categorias do aplicativo. A IA devolve as ações pedidas (criar lançamentos, quitar, editar, apagar, criar nota com lembrete, criar um documento ou responder uma pergunta) e filtros, como o nome, o período ou a categoria. Quem procura, soma e altera os lançamentos é o próprio aplicativo, no seu aparelho. Nos pedidos que alteram dados (criar, quitar, editar, apagar), nenhum lançamento existente, saldo, senha, nota ou arquivo é enviado ao provedor. A exceção são as perguntas sobre os seus dados (por exemplo, "quanto gastei em outubro"): para respondê-las, o aplicativo calcula no aparelho um resumo (totais por período, por mês e por categoria, valor a pagar e valor atrasado) e envia esse resumo ao provedor; se a pergunta pedir detalhe (por exemplo, "quais contas estão atrasadas"), envia também os lançamentos do período ou do filtro perguntado (data, nome, categoria, tipo, situação e valor), no máximo 200. Senhas do cofre, notas e arquivos nunca são enviados. Nas perguntas a IA só responde: não altera nada. O botão "Testar chave" envia uma mensagem curta de teste. Você pode cadastrar várias chaves (perfis) e escolher qual fica ativa; só a ativa é usada nos pedidos.</p>
+<p>Quando você pede um documento (PDF, TXT, HTML, CSV, Word ou Excel), a IA devolve o título, o formato e o texto (e, se você pedir, uma tabela e gráficos), e o aplicativo cria o arquivo no seu aparelho e o salva em Arquivos → Documentos, na hora, se a IA direta estiver ligada, ou depois da sua confirmação, no modo de confirmação. Se o documento precisar dos seus lançamentos (como um resumo de gastos), a IA devolve só um filtro e o aplicativo monta a tabela e os totais localmente: os lançamentos não são enviados ao provedor. Gráficos dos seus lançamentos também são somados e desenhados no aparelho. O mesmo vale para QR codes (texto, link, Wi-Fi, WhatsApp, contato ou Pix): os dados que você disser na frase (como o nome e a senha da rede Wi-Fi ou a chave Pix) são enviados ao provedor, que devolve o modelo e os campos, e o QR code é montado e salvo no aparelho, em Arquivos → Documentos. O que você escrever na frase, inclusive o assunto do documento, é enviado ao provedor. Páginas HTML criadas pela IA são gravadas sem scripts e com uma política de segurança que impede carregar conteúdo da internet; o visualizador do aplicativo também abre HTML com scripts e internet desligados, e você pode ligá-los manualmente, por sua conta e risco, em páginas de confiança.</p>
+<ul>
+  <li>A comunicação é feita diretamente entre o seu aparelho e o provedor que você escolheu, com a sua chave. Nada passa por servidores nossos. O tratamento do texto enviado segue a política de privacidade e os termos do próprio provedor, e o uso da chave pode gerar cobrança na sua conta do provedor.</li>
+  <li>No aparelho, as chaves ficam armazenadas de forma criptografada. No backup do Google Drive elas vão em texto limpo (seção 2).</li>
+  <li>A IA tem dois modos, escolhidos nas configurações da IA. No modo direto (padrão), ao tocar em "Interpretar" ela já cria, quita, edita ou apaga o que entendeu, sem pedir confirmação; no modo de confirmação, você confere e aprova antes. Em qualquer modo, as 3 últimas alterações ficam guardadas no aparelho, nas configurações da IA, cada uma com botão "Desfazer", e um aviso flutuante com "Desfazer" pode aparecer logo depois (dá para desligá-lo). Apagar envia o lançamento para a lixeira do aplicativo.</li>
+  <li>O botão "Falar" abre o reconhecimento de voz do próprio Android, um serviço do sistema (geralmente do Google ou do fabricante do aparelho). O aplicativo não pede permissão de microfone, não grava áudio e recebe apenas o texto; o tratamento do áudio segue a política do serviço de voz do seu aparelho.</li>
+  <li>Evite escrever na frase informações sensíveis, como senhas ou números de documentos e cartões.</li>
+</ul>
+
+<h2>7. Compartilhamento de dados</h2>
+<p>Não compartilhamos, vendemos ou alugamos dados pessoais a terceiros. Os dados que saem do dispositivo são apenas: os backups opcionais enviados pelo próprio usuário à sua própria conta do Google Drive, usando a API oficial do Google; as frases enviadas ao provedor de IA escolhido pelo usuário (seção 6); e os arquivos que o próprio usuário decide compartilhar, seja por outro aplicativo ou pelo servidor de compartilhamento na rede local descrito na seção 5.</p>
+
+<h2>8. Seus direitos</h2>
+<p>Você pode, a qualquer momento: excluir seus dados locais desinstalando o aplicativo; excluir backups na nuvem apagando os arquivos e as subpastas dentro da pasta "MF Pro Backups" do seu Google Drive (inclusive o arquivo da subpasta "Chaves"); e revogar o acesso do MF Pro à sua conta Google a qualquer momento em <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a>.</p>
+
+<h2>9. Alterações nesta política</h2>
+<p>Podemos atualizar esta Política de Privacidade periodicamente. A data da última atualização estará sempre indicada no topo desta página.</p>
+
+<h2>10. Contato</h2>
+<p>Em caso de dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail: <a href="mailto:edson27041999.1@gmail.com">edson27041999.1@gmail.com</a></p>
+
+<footer>MF Pro &copy; 2026</footer>
+</body>
+</html>
